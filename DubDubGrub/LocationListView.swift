@@ -8,64 +8,55 @@
 import SwiftUI
 
 struct LocationListView: View {
-    @State private var places: [(name: String, people: Int)] = [
-        ("Ac Kitchen & Lounge", 2),
-        ("Chipotle", 7),
-        ("Grace Deli", 5),
-        ("Mezcal Restaurant", 4),
-        ("Original Joe's", 8)
-    ]
-    
     var body: some View {
         NavigationView {
-            List(places, id: \.0) { place in
-                NavigationLink {
-                    VStack {
-                        Text(place.name)
-                            .font(.headline)
-                        Text("\(place.people)")
-                            .font(.footnote)
-                    }
-                } label: {
-                    HStack {
-                        Image(.defaultSquareAsset)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 80, height: 80)
-                            .clipShape(.circle)
-                            .padding(.vertical, 8)
-                        
-                        VStack (alignment: .leading) {
-                            Text(place.name)
-                                .font(.title2)
-                                .fontWeight(.semibold)
-                                .lineLimit(1)
-                                .minimumScaleFactor(0.75)
-                            
-                            HStack {
-                                ForEach(0..<min(4, place.people), id:\.self) { _ in
-                                    AvatarView(size: 35)
-                                }
-                                if place.people > 4 {
-                                    Text("+ \(place.people - 4)")
-                                }
-                            }
-                        }
-                        .padding(.leading)
+            List {
+                ForEach(1..<10) { item in
+                    NavigationLink {
+                        LocationDetailView()
+                    } label: {
+                        LocationCell()
                     }
                 }
+                .navigationTitle("Grub Spots")
             }
-            .navigationTitle("Grub Spots")
         }
     }
 }
 
-#Preview {
-    LocationListView()
+struct LocationCell: View {
+    var body: some View {
+        HStack {
+            Image(.defaultSquareAsset)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 80, height: 80)
+                .clipShape(.circle)
+                .padding(.vertical, 8)
+            
+            VStack (alignment: .leading) {
+                Text("Test location name")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.75)
+                
+                HStack {
+                    ForEach(0..<4) { _ in
+                        AvatarView(size: 35)
+                    }
+                    if Bool.random() {
+                        Text("+ \(Int.random(in: 1..<4))")
+                    }
+                }
+            }
+            .foregroundStyle(.brandPrimary)
+            .padding(.leading)
+        }
+    }
 }
 
 struct AvatarView: View {
-    
     var size: CGFloat
     
     var body: some View {
@@ -75,4 +66,8 @@ struct AvatarView: View {
             .frame(width: size, height: size)
             .clipShape(.circle)
     }
+}
+
+#Preview {
+    LocationListView()
 }
