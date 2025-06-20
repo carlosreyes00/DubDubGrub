@@ -14,7 +14,6 @@ struct LocationDetailView: View {
                    GridItem(.flexible())]
     
     var body: some View {
-        NavigationView {
             VStack (spacing: 16) {
                 Image(.defaultBannerAsset)
                     .resizable()
@@ -33,6 +32,7 @@ struct LocationDetailView: View {
                 Text("this is a test description. this is a test some random text description. this is a test description. this is a test description. this is a test description .this is a test description, this is a test description")
                     .lineLimit(3)
                     .minimumScaleFactor(0.9)
+                    .frame(minHeight: 70)
                     .padding(.horizontal)
                 
                 ZStack {
@@ -70,9 +70,11 @@ struct LocationDetailView: View {
                     .bold()
                     .font(.title2)
                 
-                LazyVGrid(columns: columns) {
-                    ForEach(0..<7) { _ in
-                        FirstNameAvatarView(name: "Carlos R")
+                ScrollView {
+                    LazyVGrid(columns: columns) {
+                        ForEach(0..<7) { _ in
+                            FirstNameAvatarView(name: "Carlos R")
+                        }
                     }
                 }
 
@@ -80,16 +82,10 @@ struct LocationDetailView: View {
             }
             .navigationTitle("Location Name")
             .navigationBarTitleDisplayMode(.inline)
-        }
     }
 }
 
-#Preview {
-    LocationDetailView()
-}
-
 struct LocationActionButton: View {
-    
     var color: Color
     var imageName: String
     
@@ -109,7 +105,6 @@ struct LocationActionButton: View {
 }
 
 struct FirstNameAvatarView: View {
-    
     var name: String
     
     var body: some View {
@@ -122,4 +117,8 @@ struct FirstNameAvatarView: View {
                 .minimumScaleFactor(0.9)
         }
     }
+}
+
+#Preview {
+    LocationDetailView()
 }
