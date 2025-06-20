@@ -44,7 +44,7 @@ struct LocationListView: View {
                             
                             HStack {
                                 ForEach(0..<min(4, place.people), id:\.self) { _ in
-                                    AvatarView()
+                                    AvatarView(size: 35)
                                 }
                                 if place.people > 4 {
                                     Text("+ \(place.people - 4)")
@@ -65,11 +65,14 @@ struct LocationListView: View {
 }
 
 struct AvatarView: View {
+    
+    var size: CGFloat
+    
     var body: some View {
         Image(.defaultAvatar)
             .resizable()
             .scaledToFit()
-            .frame(width: 35, height: 35)
+            .frame(width: size, height: size)
             .clipShape(.circle)
     }
 }
