@@ -18,8 +18,8 @@ struct LocationListView: View {
                         LocationCell()
                     }
                 }
-                .navigationTitle("Grub Spots")
             }
+            .navigationTitle("Grub Spots")
         }
     }
 }
