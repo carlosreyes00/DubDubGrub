@@ -6,17 +6,39 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		127225192E1181340052F718 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127225062E1181340052F718 /* View+Ext.swift */; };
+		1272251A2E1181340052F718 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127225082E1181340052F718 /* LocationCell.swift */; };
+		1272251B2E1181340052F718 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1272250A2E1181340052F718 /* AvatarView.swift */; };
+		1272251C2E1181340052F718 /* DDGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1272250B2E1181340052F718 /* DDGButton.swift */; };
+		1272251D2E1181340052F718 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1272250D2E1181340052F718 /* AppTabView.swift */; };
+		1272251E2E1181340052F718 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1272250E2E1181340052F718 /* LocationDetailView.swift */; };
+		1272251F2E1181340052F718 /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1272250F2E1181340052F718 /* LocationListView.swift */; };
+		127225202E1181340052F718 /* LocationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127225102E1181340052F718 /* LocationMapView.swift */; };
+		127225212E1181340052F718 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127225112E1181340052F718 /* ProfileView.swift */; };
+		127225222E1181340052F718 /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127225132E1181340052F718 /* CustomModifiers.swift */; };
+		127225232E1181340052F718 /* DubDubGrubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127225172E1181340052F718 /* DubDubGrubApp.swift */; };
+		127225242E1181340052F718 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 127225152E1181340052F718 /* Assets.xcassets */; };
+		127225272E11816C0052F718 /* DDGLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127225262E11816C0052F718 /* DDGLocation.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		127225062E1181340052F718 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		127225082E1181340052F718 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		1272250A2E1181340052F718 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		1272250B2E1181340052F718 /* DDGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGButton.swift; sourceTree = "<group>"; };
+		1272250D2E1181340052F718 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
+		1272250E2E1181340052F718 /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
+		1272250F2E1181340052F718 /* LocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
+		127225102E1181340052F718 /* LocationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapView.swift; sourceTree = "<group>"; };
+		127225112E1181340052F718 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		127225132E1181340052F718 /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
+		127225152E1181340052F718 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		127225162E1181340052F718 /* DubDubGrub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DubDubGrub.entitlements; sourceTree = "<group>"; };
+		127225172E1181340052F718 /* DubDubGrubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DubDubGrubApp.swift; sourceTree = "<group>"; };
+		127225262E11816C0052F718 /* DDGLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGLocation.swift; sourceTree = "<group>"; };
 		12CFA5682E02277300D5F287 /* DubDubGrub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DubDubGrub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		12CFA56A2E02277300D5F287 /* DubDubGrub */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = DubDubGrub;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		12CFA5652E02277300D5F287 /* Frameworks */ = {
@@ -29,10 +51,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		127225072E1181340052F718 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				127225062E1181340052F718 /* View+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		127225092E1181340052F718 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				127225082E1181340052F718 /* LocationCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1272250C2E1181340052F718 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				1272250A2E1181340052F718 /* AvatarView.swift */,
+				1272250B2E1181340052F718 /* DDGButton.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		127225122E1181340052F718 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				1272250D2E1181340052F718 /* AppTabView.swift */,
+				1272250E2E1181340052F718 /* LocationDetailView.swift */,
+				1272250F2E1181340052F718 /* LocationListView.swift */,
+				127225102E1181340052F718 /* LocationMapView.swift */,
+				127225112E1181340052F718 /* ProfileView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		127225142E1181340052F718 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				127225092E1181340052F718 /* Cells */,
+				1272250C2E1181340052F718 /* CustomViews */,
+				127225122E1181340052F718 /* Screens */,
+				127225132E1181340052F718 /* CustomModifiers.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		127225182E1181340052F718 /* DubDubGrub */ = {
+			isa = PBXGroup;
+			children = (
+				127225252E1181450052F718 /* Model */,
+				127225072E1181340052F718 /* Extensions */,
+				127225142E1181340052F718 /* Views */,
+				127225152E1181340052F718 /* Assets.xcassets */,
+				127225162E1181340052F718 /* DubDubGrub.entitlements */,
+				127225172E1181340052F718 /* DubDubGrubApp.swift */,
+			);
+			path = DubDubGrub;
+			sourceTree = "<group>";
+		};
+		127225252E1181450052F718 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				127225262E11816C0052F718 /* DDGLocation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		12CFA55F2E02277300D5F287 = {
 			isa = PBXGroup;
 			children = (
-				12CFA56A2E02277300D5F287 /* DubDubGrub */,
+				127225182E1181340052F718 /* DubDubGrub */,
 				12CFA5692E02277300D5F287 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,9 +150,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				12CFA56A2E02277300D5F287 /* DubDubGrub */,
 			);
 			name = DubDubGrub;
 			packageProductDependencies = (
@@ -109,6 +197,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				127225242E1181340052F718 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +208,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				127225192E1181340052F718 /* View+Ext.swift in Sources */,
+				1272251A2E1181340052F718 /* LocationCell.swift in Sources */,
+				1272251B2E1181340052F718 /* AvatarView.swift in Sources */,
+				1272251C2E1181340052F718 /* DDGButton.swift in Sources */,
+				127225272E11816C0052F718 /* DDGLocation.swift in Sources */,
+				1272251D2E1181340052F718 /* AppTabView.swift in Sources */,
+				1272251E2E1181340052F718 /* LocationDetailView.swift in Sources */,
+				1272251F2E1181340052F718 /* LocationListView.swift in Sources */,
+				127225202E1181340052F718 /* LocationMapView.swift in Sources */,
+				127225212E1181340052F718 /* ProfileView.swift in Sources */,
+				127225222E1181340052F718 /* CustomModifiers.swift in Sources */,
+				127225232E1181340052F718 /* DubDubGrubApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
