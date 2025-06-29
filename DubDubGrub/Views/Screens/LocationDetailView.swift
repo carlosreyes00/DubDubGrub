@@ -13,17 +13,19 @@ struct LocationDetailView: View {
                    GridItem(.flexible()),
                    GridItem(.flexible())]
     
+    var location: DDGLocation
+    
     var body: some View {
             VStack (spacing: 16) {
                 BannerImageView(imageName: "default-banner-asset")
                 
                 HStack {
-                    AddressView(address: "123 Main Street")
+                    AddressView(address: location.address)
                     Spacer()
                 }
                 .padding(.horizontal)
                 
-                DescriptionView(text: "this is a test description. this is a test some random text description. this is a test description. this is a test description. this is a test description .this is a test description, this is a test description")
+                DescriptionView(text: location.description)
                 
                 ZStack {
                     Capsule()
@@ -37,7 +39,7 @@ struct LocationDetailView: View {
                             LocationActionButton(color: .brandPrimary, imageName: "location.fill")
                         }
                         
-                        Link(destination: URL(string: "https://www.apple.com")!) {
+                        Link(destination: URL(string: location.websiteURL)!) {
                             LocationActionButton(color: .brandPrimary, imageName: "network")
                         }
                         
@@ -63,14 +65,14 @@ struct LocationDetailView: View {
                 ScrollView {
                     LazyVGrid(columns: columns) {
                         ForEach(0..<7) { _ in
-                            FirstNameAvatarView(name: "Carlos R")
+                            FirstNameAvatarView(name: "Carlos")
                         }
                     }
                 }
 
                 Spacer()
             }
-            .navigationTitle("Location Name")
+            .navigationTitle(location.name)
             .navigationBarTitleDisplayMode(.inline)
     }
 }
@@ -110,7 +112,7 @@ struct FirstNameAvatarView: View {
 }
 
 #Preview {
-    LocationDetailView()
+    LocationDetailView(location: DDGLocation(record: MockData.location))
 }
 
 struct BannerImageView: View {

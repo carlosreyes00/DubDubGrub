@@ -20,6 +20,8 @@
 		127225232E1181340052F718 /* DubDubGrubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127225172E1181340052F718 /* DubDubGrubApp.swift */; };
 		127225242E1181340052F718 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 127225152E1181340052F718 /* Assets.xcassets */; };
 		127225272E11816C0052F718 /* DDGLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127225262E11816C0052F718 /* DDGLocation.swift */; };
+		127225292E11944B0052F718 /* DDGProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127225282E1194450052F718 /* DDGProfile.swift */; };
+		1272252B2E1199860052F718 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1272252A2E1199860052F718 /* MockData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		127225162E1181340052F718 /* DubDubGrub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DubDubGrub.entitlements; sourceTree = "<group>"; };
 		127225172E1181340052F718 /* DubDubGrubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DubDubGrubApp.swift; sourceTree = "<group>"; };
 		127225262E11816C0052F718 /* DDGLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGLocation.swift; sourceTree = "<group>"; };
+		127225282E1194450052F718 /* DDGProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGProfile.swift; sourceTree = "<group>"; };
+		1272252A2E1199860052F718 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		12CFA5682E02277300D5F287 /* DubDubGrub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DubDubGrub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -91,10 +95,10 @@
 		127225142E1181340052F718 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				127225092E1181340052F718 /* Cells */,
-				1272250C2E1181340052F718 /* CustomViews */,
-				127225122E1181340052F718 /* Screens */,
 				127225132E1181340052F718 /* CustomModifiers.swift */,
+				1272250C2E1181340052F718 /* CustomViews */,
+				127225092E1181340052F718 /* Cells */,
+				127225122E1181340052F718 /* Screens */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -115,7 +119,9 @@
 		127225252E1181450052F718 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				127225282E1194450052F718 /* DDGProfile.swift */,
 				127225262E11816C0052F718 /* DDGLocation.swift */,
+				1272252A2E1199860052F718 /* MockData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,6 +219,7 @@
 				1272251B2E1181340052F718 /* AvatarView.swift in Sources */,
 				1272251C2E1181340052F718 /* DDGButton.swift in Sources */,
 				127225272E11816C0052F718 /* DDGLocation.swift in Sources */,
+				1272252B2E1199860052F718 /* MockData.swift in Sources */,
 				1272251D2E1181340052F718 /* AppTabView.swift in Sources */,
 				1272251E2E1181340052F718 /* LocationDetailView.swift in Sources */,
 				1272251F2E1181340052F718 /* LocationListView.swift in Sources */,
@@ -220,6 +227,7 @@
 				127225212E1181340052F718 /* ProfileView.swift in Sources */,
 				127225222E1181340052F718 /* CustomModifiers.swift in Sources */,
 				127225232E1181340052F718 /* DubDubGrubApp.swift in Sources */,
+				127225292E11944B0052F718 /* DDGProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
