@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1202C7792E22A54C004EF99F /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202C7782E22A54C004EF99F /* AlertItem.swift */; };
 		127225192E1181340052F718 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127225062E1181340052F718 /* View+Ext.swift */; };
 		1272251A2E1181340052F718 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127225082E1181340052F718 /* LocationCell.swift */; };
 		1272251B2E1181340052F718 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1272250A2E1181340052F718 /* AvatarView.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1202C7782E22A54C004EF99F /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
 		127225062E1181340052F718 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		127225082E1181340052F718 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		1272250A2E1181340052F718 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				127225072E1181340052F718 /* Extensions */,
 				12B69D7B2E11B28800703FF2 /* CloudKitManager.swift */,
 				12B69D7D2E11B62F00703FF2 /* Constants.swift */,
+				1202C7782E22A54C004EF99F /* AlertItem.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				1272251C2E1181340052F718 /* DDGButton.swift in Sources */,
 				127225272E11816C0052F718 /* DDGLocation.swift in Sources */,
 				1272252B2E1199860052F718 /* MockData.swift in Sources */,
+				1202C7792E22A54C004EF99F /* AlertItem.swift in Sources */,
 				1272251D2E1181340052F718 /* AppTabView.swift in Sources */,
 				12B69D7E2E11B62F00703FF2 /* Constants.swift in Sources */,
 				1272251E2E1181340052F718 /* LocationDetailView.swift in Sources */,
