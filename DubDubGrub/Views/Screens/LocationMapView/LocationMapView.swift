@@ -9,12 +9,18 @@ import SwiftUI
 import MapKit
 
 struct LocationMapView: View {
-    
+    @EnvironmentObject private var locationManager: LocationManager
     @StateObject private var viewModel = LocationMapViewModel()
 
     var body: some View {
         ZStack {
-            Map(position: $viewModel.cameraPosition).ignoresSafeArea()
+            Map(initialPosition: viewModel.cameraPosition) {
+                ForEach(locationManager.locations) { location in
+                    Marker(item: MKMapItem(placemark: MKPlacemark(coordinate: location.location.coordinate)))
+                        .tint(.brandPrimary)
+                }
+            }
+            .ignoresSafeArea()
             
             VStack {
                 LogoView().shadow(radius: 10)
@@ -27,7 +33,9 @@ struct LocationMapView: View {
                message: { viewModel.alertItem?.message ?? Text("no message") }
         )
         .onAppear {
-            viewModel.getLocations()
+            if locationManager.locations.isEmpty {
+                viewModel.getLocations(for: locationManager)
+            }
         }
     }
 }
