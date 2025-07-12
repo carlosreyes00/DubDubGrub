@@ -21,9 +21,11 @@ struct LocationMapView: View {
                 Spacer()
             }
         }
-        .alert(item: $viewModel.alertItem, content: { alertItem in
-            Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
-        })
+        .alert(viewModel.alertItem?.title ?? "no alert",
+               isPresented: $viewModel.alertIsPresented,
+               actions: { } ,
+               message: { viewModel.alertItem?.message ?? Text("no message") }
+        )
         .onAppear {
             viewModel.getLocations()
         }

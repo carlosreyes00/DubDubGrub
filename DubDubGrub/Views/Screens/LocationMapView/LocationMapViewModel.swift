@@ -10,6 +10,7 @@ import MapKit
 
 final class LocationMapViewModel: ObservableObject {
     @Published var alertItem: AlertItem?
+    @Published var alertIsPresented: Bool = false
     
     @Published var cameraPosition = MapCameraPosition.region(
         MKCoordinateRegion(
@@ -31,6 +32,7 @@ final class LocationMapViewModel: ObservableObject {
                 self.locations = locations
             case .failure(_):
                 alertItem = AlertContext.unableToGetLocation
+                alertIsPresented = true
             }
         }
     }
