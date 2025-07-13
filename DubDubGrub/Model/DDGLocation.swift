@@ -7,6 +7,7 @@
 
 //import Foundation
 import CloudKit
+import SwiftUI
 
 struct DDGLocation: Identifiable, Hashable {
     static let kName        = "name"
@@ -40,4 +41,13 @@ struct DDGLocation: Identifiable, Hashable {
         phoneNumber = record[DDGLocation.kPhoneNumber] as? String ?? "N/A"
     }
     
+    func createSquareImage() -> UIImage {
+        guard let asset = squareAsset else { return PlaceholderImage.square }
+        return asset.convertToUIImage(in: .square)
+    }
+    
+    func createBannerImage() -> UIImage {
+        guard let asset = bannerAsset else { return PlaceholderImage.banner }
+        return asset.convertToUIImage(in: .banner)
+    }
 }

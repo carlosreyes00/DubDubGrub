@@ -16,11 +16,13 @@ struct LocationMapView: View {
         ZStack {
             Map(initialPosition: viewModel.cameraPosition) {
                 ForEach(locationManager.locations) { location in
-                    Marker(item: MKMapItem(placemark: MKPlacemark(coordinate: location.location.coordinate)))
+                    Marker(location.name, coordinate: location.location.coordinate)
                         .tint(.brandPrimary)
                 }
+                
+                UserAnnotation()
+                    .tint(.pink)
             }
-            .ignoresSafeArea()
             
             VStack {
                 LogoView().shadow(radius: 10)
@@ -33,6 +35,8 @@ struct LocationMapView: View {
                message: { viewModel.alertItem?.message ?? Text("no message") }
         )
         .onAppear {
+            viewModel.checkIfLocationServicesIsEnabled()
+            
             if locationManager.locations.isEmpty {
                 viewModel.getLocations(for: locationManager)
             }
