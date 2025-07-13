@@ -24,6 +24,7 @@ struct CloudKitManager {
             
             let locations = records.map { $0.convertToDDGLocation() }
             
+            print("location downloaded succesfully")
             completed(.success(locations))
         }
     }

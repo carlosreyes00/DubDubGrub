@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct LocationListView: View {
-    @State private var locations: [DDGLocation] = [DDGLocation(record: MockData.location)]
+    @EnvironmentObject private var locationManager: LocationManager
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(locations) { location in
+                ForEach(locationManager.locations) { location in
                     NavigationLink {
                         LocationDetailView(location: location)
                     } label: {
@@ -24,8 +24,4 @@ struct LocationListView: View {
             .navigationTitle("Grub Spots")
         }
     }
-}
-
-#Preview {
-    LocationListView()
 }
