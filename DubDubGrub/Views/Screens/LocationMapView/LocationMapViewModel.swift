@@ -26,12 +26,17 @@ final class LocationMapViewModel: NSObject, ObservableObject {
     var deviceLocationManager: CLLocationManager?
     
     func checkIfLocationServicesIsEnabled() {
-        DispatchQueue.global().async { [self] in
+        DispatchQueue.global(qos: .userInteractive).async { [self] in
             if CLLocationManager.locationServicesEnabled() {
-                deviceLocationManager = CLLocationManager()
-                deviceLocationManager!.delegate = self
+                DispatchQueue.main.async { [self] in
+                    deviceLocationManager = CLLocationManager()
+                    deviceLocationManager!.delegate = self
+                }
             } else {
-                alertItem = AlertContext.locationDisabled
+                DispatchQueue.main.async { [self] in
+                    alertItem = AlertContext.locationDisabled
+                    alertIsPresented = true
+                }
             }
         }
     }
@@ -43,9 +48,15 @@ final class LocationMapViewModel: NSObject, ObservableObject {
         case .notDetermined:
             deviceLocationManager.requestWhenInUseAuthorization()
         case .restricted:
-            alertItem = AlertContext.locationRestricted
+            DispatchQueue.main.async { [self] in
+                alertItem = AlertContext.locationRestricted
+                alertIsPresented = true
+            }
         case .denied:
-            alertItem = AlertContext.locationDenied
+            DispatchQueue.main.async { [self] in
+                alertItem = AlertContext.locationDenied
+                alertIsPresented = true
+            }
         case .authorizedAlways, .authorizedWhenInUse:
             break
         @unknown default:
