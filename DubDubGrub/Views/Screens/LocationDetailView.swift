@@ -65,7 +65,7 @@ struct LocationDetailView: View {
                 ScrollView {
                     LazyVGrid(columns: columns) {
                         ForEach(0..<7) { _ in
-                            FirstNameAvatarView(name: "Carlos")
+                            FirstNameAvatarView(image: PlaceholderImage.avatar, firstName: "Carlos")
                         }
                     }
                 }
@@ -97,22 +97,20 @@ struct LocationActionButton: View {
 }
 
 struct FirstNameAvatarView: View {
-    var name: String
+    
+    var image: UIImage
+    var firstName: String
     
     var body: some View {
         VStack {
-            AvatarView(size: 64)
+            AvatarView(image: image, size: 64)
             
-            Text(name)
+            Text(firstName)
                 .bold()
                 .lineLimit(1)
                 .minimumScaleFactor(0.9)
         }
     }
-}
-
-#Preview {
-    LocationDetailView(location: DDGLocation(record: MockData.location))
 }
 
 struct BannerImageView: View {

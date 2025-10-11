@@ -9,6 +9,8 @@ import SwiftUI
 import MapKit
 
 final class LocationMapViewModel: NSObject, ObservableObject {
+    
+    @Published var isShowingOnboardView = false
     @Published var alertItem: AlertItem?
     @Published var alertIsPresented: Bool = false
     
@@ -24,6 +26,20 @@ final class LocationMapViewModel: NSObject, ObservableObject {
     )
     
     var deviceLocationManager: CLLocationManager?
+    let kHasSeenOnboardView = "hasSeenOnboardView"
+    
+    var hasSeenOnboardView: Bool {
+        return UserDefaults.standard.bool(forKey: kHasSeenOnboardView)
+    }
+    
+    func runStartupChecks() {
+        if !hasSeenOnboardView {
+            isShowingOnboardView = true
+            UserDefaults.standard.set(true, forKey: kHasSeenOnboardView)
+        } else {
+            checkIfLocationServicesIsEnabled()
+        }
+    }
     
     func checkIfLocationServicesIsEnabled() {
         DispatchQueue.global(qos: .userInteractive).async { [self] in
@@ -81,6 +97,7 @@ final class LocationMapViewModel: NSObject, ObservableObject {
 
 extension LocationMapViewModel: CLLocationManagerDelegate {
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        print("location manager delegate is being called :)")
         checkLocationAuthorization()
     }
 }

@@ -29,7 +29,7 @@ struct LocationCell: View {
                 
                 HStack {
                     ForEach(0..<4) { _ in
-                        AvatarView(size: 35)
+                        AvatarView(image: PlaceholderImage.avatar, size: 35)
                     }
                     if Bool.random() {
                         Text("+ \(Int.random(in: 1..<4))")
