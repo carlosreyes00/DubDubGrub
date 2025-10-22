@@ -11,4 +11,9 @@ extension View {
     func profileNameStyle() -> some View {
         modifier(ProfileNameText())
     }
+    
+    func dismissKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+
 }
