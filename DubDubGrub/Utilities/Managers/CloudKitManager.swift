@@ -14,17 +14,18 @@ struct CloudKitManager {
         let query = CKQuery(recordType: RecordType.location, predicate: NSPredicate(value: true))
         query.sortDescriptors = [sortDescriptor]
         
-        CKContainer.default().publicCloudDatabase.perform(query, inZoneWith: nil) { records, error in
-            guard error == nil else {
-                completed(.failure(error!))
-                return
+        CKContainer.default().publicCloudDatabase.fetch(withQuery: query) { result in
+            switch result {
+            case .success((let matchResults, _)):
+                do {
+                    let locations = try! matchResults.map {
+                        try $1.get().convertToDDGLocation()
+                    }
+                    completed(.success(locations))
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
             }
-            
-            guard let records = records else { return }
-            
-            let locations = records.map { $0.convertToDDGLocation() }
-            
-            completed(.success(locations))
         }
     }
 }
