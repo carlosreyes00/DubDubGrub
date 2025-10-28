@@ -33,6 +33,7 @@
 		12B69D7C2E11B28800703FF2 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B69D7B2E11B28800703FF2 /* CloudKitManager.swift */; };
 		12B69D7E2E11B62F00703FF2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B69D7D2E11B62F00703FF2 /* Constants.swift */; };
 		12B69D802E11BF2D00703FF2 /* CKRecord+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B69D7F2E11BF2D00703FF2 /* CKRecord+Ext.swift */; };
+		B35CCD6C2EB03F1600DE14C4 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CCD6B2EB03F1600DE14C4 /* ProfileViewModel.swift */; };
 		B3D6FCA62EA8F840000E6A0F /* UIImag+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D6FCA52EA8F840000E6A0F /* UIImag+Ext.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		12B69D7D2E11B62F00703FF2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		12B69D7F2E11BF2D00703FF2 /* CKRecord+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CKRecord+Ext.swift"; sourceTree = "<group>"; };
 		12CFA5682E02277300D5F287 /* DubDubGrub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DubDubGrub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B35CCD6B2EB03F1600DE14C4 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		B3D6FCA52EA8F840000E6A0F /* UIImag+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImag+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,11 +131,11 @@
 		127225122E1181340052F718 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				B35CCD6A2EB03ED700DE14C4 /* ProfileView */,
 				128CAC762E22AD5000DFC43F /* LocationMapView */,
 				1272250D2E1181340052F718 /* AppTabView.swift */,
 				1272250E2E1181340052F718 /* LocationDetailView.swift */,
 				1272250F2E1181340052F718 /* LocationListView.swift */,
-				127225112E1181340052F718 /* ProfileView.swift */,
 				12A078C22E26F5A6006CAB1A /* OnboardView.swift */,
 			);
 			path = Screens;
@@ -218,6 +220,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		B35CCD6A2EB03ED700DE14C4 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				127225112E1181340052F718 /* ProfileView.swift */,
+				B35CCD6B2EB03F1600DE14C4 /* ProfileViewModel.swift */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -248,7 +259,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1630;
-				LastUpgradeCheck = 1630;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					12CFA5672E02277300D5F287 = {
 						CreatedOnToolsVersion = 16.3;
@@ -293,6 +304,7 @@
 				127225192E1181340052F718 /* View+Ext.swift in Sources */,
 				1272251A2E1181340052F718 /* LocationCell.swift in Sources */,
 				1281A78B2E22F21F00F0633C /* CKAsset+Ext.swift in Sources */,
+				B35CCD6C2EB03F1600DE14C4 /* ProfileViewModel.swift in Sources */,
 				12B69D802E11BF2D00703FF2 /* CKRecord+Ext.swift in Sources */,
 				1272251B2E1181340052F718 /* AvatarView.swift in Sources */,
 				1272251C2E1181340052F718 /* DDGButton.swift in Sources */,
@@ -381,6 +393,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -438,6 +451,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
