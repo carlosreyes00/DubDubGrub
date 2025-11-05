@@ -97,7 +97,6 @@ final class LocationMapViewModel: NSObject, ObservableObject {
 
 extension LocationMapViewModel: CLLocationManagerDelegate {
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        print("location manager delegate is being called :)")
         checkLocationAuthorization()
     }
 }

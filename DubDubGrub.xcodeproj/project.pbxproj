@@ -33,6 +33,7 @@
 		12B69D7C2E11B28800703FF2 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B69D7B2E11B28800703FF2 /* CloudKitManager.swift */; };
 		12B69D7E2E11B62F00703FF2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B69D7D2E11B62F00703FF2 /* Constants.swift */; };
 		12B69D802E11BF2D00703FF2 /* CKRecord+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B69D7F2E11BF2D00703FF2 /* CKRecord+Ext.swift */; };
+		B34A64B82EB68B1E008EEBCE /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34A64B72EB68B1E008EEBCE /* LoadingView.swift */; };
 		B35CCD6C2EB03F1600DE14C4 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CCD6B2EB03F1600DE14C4 /* ProfileViewModel.swift */; };
 		B3D6FCA62EA8F840000E6A0F /* UIImag+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D6FCA52EA8F840000E6A0F /* UIImag+Ext.swift */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		12B69D7D2E11B62F00703FF2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		12B69D7F2E11BF2D00703FF2 /* CKRecord+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CKRecord+Ext.swift"; sourceTree = "<group>"; };
 		12CFA5682E02277300D5F287 /* DubDubGrub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DubDubGrub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B34A64B72EB68B1E008EEBCE /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		B35CCD6B2EB03F1600DE14C4 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		B3D6FCA52EA8F840000E6A0F /* UIImag+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImag+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +126,7 @@
 				12A078C62E26FAEA006CAB1A /* Buttons */,
 				12A078C42E26F5F0006CAB1A /* LogoView.swift */,
 				1272250A2E1181340052F718 /* AvatarView.swift */,
+				B34A64B72EB68B1E008EEBCE /* LoadingView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -223,8 +226,8 @@
 		B35CCD6A2EB03ED700DE14C4 /* ProfileView */ = {
 			isa = PBXGroup;
 			children = (
-				127225112E1181340052F718 /* ProfileView.swift */,
 				B35CCD6B2EB03F1600DE14C4 /* ProfileViewModel.swift */,
+				127225112E1181340052F718 /* ProfileView.swift */,
 			);
 			path = ProfileView;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				1281A78B2E22F21F00F0633C /* CKAsset+Ext.swift in Sources */,
 				B35CCD6C2EB03F1600DE14C4 /* ProfileViewModel.swift in Sources */,
 				12B69D802E11BF2D00703FF2 /* CKRecord+Ext.swift in Sources */,
+				B34A64B82EB68B1E008EEBCE /* LoadingView.swift in Sources */,
 				1272251B2E1181340052F718 /* AvatarView.swift in Sources */,
 				1272251C2E1181340052F718 /* DDGButton.swift in Sources */,
 				12A078C52E26F5F0006CAB1A /* LogoView.swift in Sources */,

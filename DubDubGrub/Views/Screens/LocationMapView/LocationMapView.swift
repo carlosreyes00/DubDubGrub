@@ -20,8 +20,16 @@ struct LocationMapView: View {
                         .tint(.brandPrimary)
                 }
                 
-                UserAnnotation()
-                    .tint(.pink)
+                UserAnnotation {
+                    Circle()
+                        .frame(width: 18, height: 18)
+                        .foregroundStyle(.white)
+                        .overlay {
+                            Circle()
+                                .frame(width: 12, height: 12)
+                                .foregroundStyle(.pink)
+                        }
+                }
             }
             
             VStack {
