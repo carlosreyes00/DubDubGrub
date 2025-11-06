@@ -6,17 +6,71 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXFileReference section */
-		12CFA5682E02277300D5F287 /* DubDubGrub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DubDubGrub.app; sourceTree = BUILT_PRODUCTS_DIR; };
-/* End PBXFileReference section */
+/* Begin PBXBuildFile section */
+		1202C7792E22A54C004EF99F /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202C7782E22A54C004EF99F /* AlertItem.swift */; };
+		1211A8AD2E9B0F4B00415832 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1211A8AC2E9B0F4B00415832 /* PhotoPicker.swift */; };
+		121EBDAC2E22D55600792E57 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121EBDAB2E22D55600792E57 /* LocationManager.swift */; };
+		127225192E1181340052F718 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127225062E1181340052F718 /* View+Ext.swift */; };
+		1272251A2E1181340052F718 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127225082E1181340052F718 /* LocationCell.swift */; };
+		1272251B2E1181340052F718 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1272250A2E1181340052F718 /* AvatarView.swift */; };
+		1272251C2E1181340052F718 /* DDGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1272250B2E1181340052F718 /* DDGButton.swift */; };
+		1272251D2E1181340052F718 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1272250D2E1181340052F718 /* AppTabView.swift */; };
+		1272251E2E1181340052F718 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1272250E2E1181340052F718 /* LocationDetailView.swift */; };
+		1272251F2E1181340052F718 /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1272250F2E1181340052F718 /* LocationListView.swift */; };
+		127225202E1181340052F718 /* LocationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127225102E1181340052F718 /* LocationMapView.swift */; };
+		127225212E1181340052F718 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127225112E1181340052F718 /* ProfileView.swift */; };
+		127225222E1181340052F718 /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127225132E1181340052F718 /* CustomModifiers.swift */; };
+		127225232E1181340052F718 /* DubDubGrubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127225172E1181340052F718 /* DubDubGrubApp.swift */; };
+		127225242E1181340052F718 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 127225152E1181340052F718 /* Assets.xcassets */; };
+		127225272E11816C0052F718 /* DDGLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127225262E11816C0052F718 /* DDGLocation.swift */; };
+		127225292E11944B0052F718 /* DDGProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127225282E1194450052F718 /* DDGProfile.swift */; };
+		1272252B2E1199860052F718 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1272252A2E1199860052F718 /* MockData.swift */; };
+		1281A78B2E22F21F00F0633C /* CKAsset+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1281A78A2E22F21F00F0633C /* CKAsset+Ext.swift */; };
+		128CAC782E22AD7B00DFC43F /* LocationMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128CAC772E22AD7B00DFC43F /* LocationMapViewModel.swift */; };
+		12A078C32E26F5A6006CAB1A /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A078C22E26F5A6006CAB1A /* OnboardView.swift */; };
+		12A078C52E26F5F0006CAB1A /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A078C42E26F5F0006CAB1A /* LogoView.swift */; };
+		12A078C82E26FAFA006CAB1A /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A078C72E26FAFA006CAB1A /* XDismissButton.swift */; };
+		12B69D7C2E11B28800703FF2 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B69D7B2E11B28800703FF2 /* CloudKitManager.swift */; };
+		12B69D7E2E11B62F00703FF2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B69D7D2E11B62F00703FF2 /* Constants.swift */; };
+		12B69D802E11BF2D00703FF2 /* CKRecord+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B69D7F2E11BF2D00703FF2 /* CKRecord+Ext.swift */; };
+		B34A64B82EB68B1E008EEBCE /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34A64B72EB68B1E008EEBCE /* LoadingView.swift */; };
+		B35CCD6C2EB03F1600DE14C4 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CCD6B2EB03F1600DE14C4 /* ProfileViewModel.swift */; };
+		B3D6FCA62EA8F840000E6A0F /* UIImag+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D6FCA52EA8F840000E6A0F /* UIImag+Ext.swift */; };
+/* End PBXBuildFile section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		12CFA56A2E02277300D5F287 /* DubDubGrub */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = DubDubGrub;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
+/* Begin PBXFileReference section */
+		1202C7782E22A54C004EF99F /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
+		1211A8AC2E9B0F4B00415832 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		121EBDAB2E22D55600792E57 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		127225062E1181340052F718 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		127225082E1181340052F718 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		1272250A2E1181340052F718 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		1272250B2E1181340052F718 /* DDGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGButton.swift; sourceTree = "<group>"; };
+		1272250D2E1181340052F718 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
+		1272250E2E1181340052F718 /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
+		1272250F2E1181340052F718 /* LocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
+		127225102E1181340052F718 /* LocationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapView.swift; sourceTree = "<group>"; };
+		127225112E1181340052F718 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		127225132E1181340052F718 /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
+		127225152E1181340052F718 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		127225162E1181340052F718 /* DubDubGrub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DubDubGrub.entitlements; sourceTree = "<group>"; };
+		127225172E1181340052F718 /* DubDubGrubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DubDubGrubApp.swift; sourceTree = "<group>"; };
+		127225262E11816C0052F718 /* DDGLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGLocation.swift; sourceTree = "<group>"; };
+		127225282E1194450052F718 /* DDGProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGProfile.swift; sourceTree = "<group>"; };
+		1272252A2E1199860052F718 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		1281A78A2E22F21F00F0633C /* CKAsset+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CKAsset+Ext.swift"; sourceTree = "<group>"; };
+		128CAC772E22AD7B00DFC43F /* LocationMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapViewModel.swift; sourceTree = "<group>"; };
+		12A078C22E26F5A6006CAB1A /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
+		12A078C42E26F5F0006CAB1A /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		12A078C72E26FAFA006CAB1A /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
+		12B69D7B2E11B28800703FF2 /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		12B69D7D2E11B62F00703FF2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		12B69D7F2E11BF2D00703FF2 /* CKRecord+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CKRecord+Ext.swift"; sourceTree = "<group>"; };
+		12CFA5682E02277300D5F287 /* DubDubGrub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DubDubGrub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B34A64B72EB68B1E008EEBCE /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		B35CCD6B2EB03F1600DE14C4 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		B3D6FCA52EA8F840000E6A0F /* UIImag+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImag+Ext.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		12CFA5652E02277300D5F287 /* Frameworks */ = {
@@ -29,10 +83,134 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1211A8AB2E9B0F1A00415832 /* UIKit Components */ = {
+			isa = PBXGroup;
+			children = (
+				1211A8AC2E9B0F4B00415832 /* PhotoPicker.swift */,
+			);
+			path = "UIKit Components";
+			sourceTree = "<group>";
+		};
+		121EBDAA2E22D53E00792E57 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				12B69D7B2E11B28800703FF2 /* CloudKitManager.swift */,
+				121EBDAB2E22D55600792E57 /* LocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		127225072E1181340052F718 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				127225062E1181340052F718 /* View+Ext.swift */,
+				12B69D7F2E11BF2D00703FF2 /* CKRecord+Ext.swift */,
+				1281A78A2E22F21F00F0633C /* CKAsset+Ext.swift */,
+				B3D6FCA52EA8F840000E6A0F /* UIImag+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		127225092E1181340052F718 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				127225082E1181340052F718 /* LocationCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1272250C2E1181340052F718 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				1211A8AB2E9B0F1A00415832 /* UIKit Components */,
+				12A078C62E26FAEA006CAB1A /* Buttons */,
+				12A078C42E26F5F0006CAB1A /* LogoView.swift */,
+				1272250A2E1181340052F718 /* AvatarView.swift */,
+				B34A64B72EB68B1E008EEBCE /* LoadingView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		127225122E1181340052F718 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B35CCD6A2EB03ED700DE14C4 /* ProfileView */,
+				128CAC762E22AD5000DFC43F /* LocationMapView */,
+				1272250D2E1181340052F718 /* AppTabView.swift */,
+				1272250E2E1181340052F718 /* LocationDetailView.swift */,
+				1272250F2E1181340052F718 /* LocationListView.swift */,
+				12A078C22E26F5A6006CAB1A /* OnboardView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		127225142E1181340052F718 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				127225132E1181340052F718 /* CustomModifiers.swift */,
+				1272250C2E1181340052F718 /* CustomViews */,
+				127225092E1181340052F718 /* Cells */,
+				127225122E1181340052F718 /* Screens */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		127225182E1181340052F718 /* DubDubGrub */ = {
+			isa = PBXGroup;
+			children = (
+				12B69D7A2E11B23800703FF2 /* Utilities */,
+				127225252E1181450052F718 /* Model */,
+				127225142E1181340052F718 /* Views */,
+				127225152E1181340052F718 /* Assets.xcassets */,
+				127225162E1181340052F718 /* DubDubGrub.entitlements */,
+				127225172E1181340052F718 /* DubDubGrubApp.swift */,
+			);
+			path = DubDubGrub;
+			sourceTree = "<group>";
+		};
+		127225252E1181450052F718 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				127225282E1194450052F718 /* DDGProfile.swift */,
+				127225262E11816C0052F718 /* DDGLocation.swift */,
+				1272252A2E1199860052F718 /* MockData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		128CAC762E22AD5000DFC43F /* LocationMapView */ = {
+			isa = PBXGroup;
+			children = (
+				128CAC772E22AD7B00DFC43F /* LocationMapViewModel.swift */,
+				127225102E1181340052F718 /* LocationMapView.swift */,
+			);
+			path = LocationMapView;
+			sourceTree = "<group>";
+		};
+		12A078C62E26FAEA006CAB1A /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				1272250B2E1181340052F718 /* DDGButton.swift */,
+				12A078C72E26FAFA006CAB1A /* XDismissButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		12B69D7A2E11B23800703FF2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				121EBDAA2E22D53E00792E57 /* Managers */,
+				127225072E1181340052F718 /* Extensions */,
+				12B69D7D2E11B62F00703FF2 /* Constants.swift */,
+				1202C7782E22A54C004EF99F /* AlertItem.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		12CFA55F2E02277300D5F287 = {
 			isa = PBXGroup;
 			children = (
-				12CFA56A2E02277300D5F287 /* DubDubGrub */,
+				127225182E1181340052F718 /* DubDubGrub */,
 				12CFA5692E02277300D5F287 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +221,15 @@
 				12CFA5682E02277300D5F287 /* DubDubGrub.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B35CCD6A2EB03ED700DE14C4 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				B35CCD6B2EB03F1600DE14C4 /* ProfileViewModel.swift */,
+				127225112E1181340052F718 /* ProfileView.swift */,
+			);
+			path = ProfileView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -60,9 +247,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				12CFA56A2E02277300D5F287 /* DubDubGrub */,
-			);
 			name = DubDubGrub;
 			packageProductDependencies = (
 			);
@@ -78,7 +262,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1630;
-				LastUpgradeCheck = 1630;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					12CFA5672E02277300D5F287 = {
 						CreatedOnToolsVersion = 16.3;
@@ -109,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				127225242E1181340052F718 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +304,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				127225192E1181340052F718 /* View+Ext.swift in Sources */,
+				1272251A2E1181340052F718 /* LocationCell.swift in Sources */,
+				1281A78B2E22F21F00F0633C /* CKAsset+Ext.swift in Sources */,
+				B35CCD6C2EB03F1600DE14C4 /* ProfileViewModel.swift in Sources */,
+				12B69D802E11BF2D00703FF2 /* CKRecord+Ext.swift in Sources */,
+				B34A64B82EB68B1E008EEBCE /* LoadingView.swift in Sources */,
+				1272251B2E1181340052F718 /* AvatarView.swift in Sources */,
+				1272251C2E1181340052F718 /* DDGButton.swift in Sources */,
+				12A078C52E26F5F0006CAB1A /* LogoView.swift in Sources */,
+				127225272E11816C0052F718 /* DDGLocation.swift in Sources */,
+				1272252B2E1199860052F718 /* MockData.swift in Sources */,
+				1202C7792E22A54C004EF99F /* AlertItem.swift in Sources */,
+				1272251D2E1181340052F718 /* AppTabView.swift in Sources */,
+				12B69D7E2E11B62F00703FF2 /* Constants.swift in Sources */,
+				1272251E2E1181340052F718 /* LocationDetailView.swift in Sources */,
+				1272251F2E1181340052F718 /* LocationListView.swift in Sources */,
+				121EBDAC2E22D55600792E57 /* LocationManager.swift in Sources */,
+				128CAC782E22AD7B00DFC43F /* LocationMapViewModel.swift in Sources */,
+				127225202E1181340052F718 /* LocationMapView.swift in Sources */,
+				127225212E1181340052F718 /* ProfileView.swift in Sources */,
+				127225222E1181340052F718 /* CustomModifiers.swift in Sources */,
+				127225232E1181340052F718 /* DubDubGrubApp.swift in Sources */,
+				127225292E11944B0052F718 /* DDGProfile.swift in Sources */,
+				12A078C32E26F5A6006CAB1A /* OnboardView.swift in Sources */,
+				12B69D7C2E11B28800703FF2 /* CloudKitManager.swift in Sources */,
+				1211A8AD2E9B0F4B00415832 /* PhotoPicker.swift in Sources */,
+				12A078C82E26FAFA006CAB1A /* XDismissButton.swift in Sources */,
+				B3D6FCA62EA8F840000E6A0F /* UIImag+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +397,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -241,6 +455,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -258,6 +473,9 @@
 				DEVELOPMENT_TEAM = P52S2D2953;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Dub Dub Grub uses your location to show you where you are in relation to your friends and food.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Dub Dub Grub uses your location to show you where you are in relation to your friends and food.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -271,9 +489,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.carlosreyes.DubDubGrub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -289,6 +511,9 @@
 				DEVELOPMENT_TEAM = P52S2D2953;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Dub Dub Grub uses your location to show you where you are in relation to your friends and food.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Dub Dub Grub uses your location to show you where you are in relation to your friends and food.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -302,9 +527,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.carlosreyes.DubDubGrub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -14,14 +14,21 @@ struct AppTabView: View {
                 .tabItem {
                     Label("Map", systemImage: "map")
                 }
+            
             LocationListView()
                 .tabItem {
                     Label("Locations", systemImage: "building")
                 }
-            Profile()
-                .tabItem {
-                    Label("Profile", systemImage: "person")
-                }
+            
+            NavigationView {
+                ProfileView()
+            }
+            .tabItem {
+                Label("Profile", systemImage: "person")
+            }
+        }
+        .onAppear {
+            CloudKitManager.shared.getUserRecord()
         }
         .accentColor(.brandPrimary)
     }
