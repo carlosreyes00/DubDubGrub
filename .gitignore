@@ -6,8 +6,11 @@
 xcuserdata/
 
 *.xcuserstate
+<<<<<<< HEAD
 *.DS_Store
 UserInterfaceState.xcuserstate
+=======
+>>>>>>> dev
 
 ## Obj-C/Swift specific
 *.hmap
