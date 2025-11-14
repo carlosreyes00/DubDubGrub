@@ -16,7 +16,7 @@ struct AlertItem: Identifiable {
 }
 
 struct AlertContext {
-    // Mark: - MapView Errors
+    // MARK: - MapView Errors
     static let unableToGetLocation  = AlertItem(title: "Locations Error",
                                                message: Text("Unable to retrieve locations at this time.\nPlease try again."),
                                                dismissButton: .default(Text("Ok")))
@@ -33,7 +33,7 @@ struct AlertContext {
                                           message: Text("your phone's location services are disabled. To change that go to your phone's Settings > Privacy > Location"),
                                           dismissButton: .default(Text("Ok")))
     
-    // Mark: - ProfileView Errors
+    // MARK: - ProfileView Errors
     static let invalidProfile       = AlertItem(title: "Invalid Profile",
                                                message: Text("All fields are required as well as a profile photo. Your bio must be < 100 characters.\nPlease try again."),
                                                dismissButton: .default(Text("Ok")))
@@ -60,5 +60,10 @@ struct AlertContext {
     
     static let updateProfileFailure = AlertItem(title: "Profile Update Failed!",
                                               message: Text("We were unable to update your profile at this time.\nPlease try again later."),
+                                              dismissButton: .default(Text("Ok")))
+    
+    // MARK: LocationDetailView Errors
+    static let invalidPhoneNumber   = AlertItem(title: "Invalid Phone Number!",
+                                              message: Text("The phone number for the location is invalid. Please look up the phone number yourself."),
                                               dismissButton: .default(Text("Ok")))
 }
