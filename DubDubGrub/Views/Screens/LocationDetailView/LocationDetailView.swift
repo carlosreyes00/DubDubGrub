@@ -12,6 +12,7 @@ struct LocationDetailView: View {
     @ObservedObject var viewModel: LocationDetailViewModel
     
     var body: some View {
+        ZStack (alignment: .center) {
             VStack (spacing: 16) {
                 BannerImageView(image: viewModel.location.createBannerImage())
                 
@@ -60,12 +61,14 @@ struct LocationDetailView: View {
                 
                 ScrollView {
                     LazyVGrid(columns: viewModel.columns) {
-                        ForEach(0..<7) { _ in
-                            FirstNameAvatarView(image: PlaceholderImage.avatar, firstName: "Carlos")
-                        }
+                        FirstNameAvatarView(image: PlaceholderImage.avatar, firstName: "Carlos")
+                            .onTapGesture {
+                                withAnimation {
+                                    viewModel.isShowingProfileModal = true
+                                }
+                            }
                     }
                 }
-
                 Spacer()
             }
             .alert(viewModel.alertItem?.title ?? "no alert",
@@ -75,6 +78,20 @@ struct LocationDetailView: View {
             )
             .navigationTitle(viewModel.location.name)
             .navigationBarTitleDisplayMode(.inline)
+            
+            if viewModel.isShowingProfileModal {
+                Color(.systemBackground)
+                    .ignoresSafeArea()
+                    .opacity(0.9)
+                    .transition(.opacity)
+                    .zIndex(1)
+                
+                ProfileModalView(isShowingProfileModal: $viewModel.isShowingProfileModal,
+                                 profile: MockData.profile.convertToDDGProfile())
+                .transition(.opacity.combined(with: .slide))
+                .zIndex(2)
+            }
+        }
     }
 }
 
@@ -148,4 +165,8 @@ struct DescriptionView: View {
             .frame(minHeight: 70)
             .padding(.horizontal)
     }
+}
+
+#Preview {
+    LocationDetailView(viewModel: LocationDetailViewModel(location: DDGLocation(record: MockData.location)))
 }

@@ -11,14 +11,17 @@ import MapKit
 
 final class LocationDetailViewModel: ObservableObject {
     
+    @Published var alertItem: AlertItem?
+    @Published var alertIsPresented: Bool = false
+    
+    @Published var isShowingProfileModal = false
+    
     let columns = [GridItem(.flexible()),
                    GridItem(.flexible()),
                    GridItem(.flexible())]
     
     var location: DDGLocation
     
-    @Published var alertItem: AlertItem?
-    @Published var alertIsPresented: Bool = false
     
     init(location: DDGLocation) {
         self.location = location
