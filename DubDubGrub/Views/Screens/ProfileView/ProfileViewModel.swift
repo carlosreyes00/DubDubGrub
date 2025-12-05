@@ -63,6 +63,7 @@ final class ProfileViewModel: ObservableObject {
                     switch result {
                     case .success():
                         existingProfileRecord = userRecord
+                        CloudKitManager.shared.profileRecordID = userRecord.recordID
                         alertItem = AlertContext.createProfileSuccess
                         alertIsPresented = true
                     case .failure(_):

@@ -8,6 +8,9 @@
 import Foundation
 import SwiftUI
 import MapKit
+import CloudKit
+
+enum CheckInStatus { case checkedIn, checkedOut }
 
 final class LocationDetailViewModel: ObservableObject {
     
@@ -46,4 +49,41 @@ final class LocationDetailViewModel: ObservableObject {
             UIApplication.shared.open(url)
         }
     }
+    
+    func updateCheckInStatus(to checkInStatus: CheckInStatus) {
+        // Retrieve the DDGProfile
+        
+        guard let profileRecordID = CloudKitManager.shared.profileRecordID else {
+            //show an alert
+            return
+        }
+        
+        CloudKitManager.shared.fetchRecord(with: profileRecordID) { [self] result in
+                switch result {
+                case .success(let record):
+                    // Create a the reference to the location
+                    switch checkInStatus {
+                    case .checkedIn:
+                        record[DDGProfile.kIsCheckedIn] = CKRecord.Reference(recordID: location.id, action: .none)
+                    case .checkedOut:
+                        record[DDGProfile.kIsCheckedIn] = nil
+                    }
+                
+                // Save the updated profile to CloudKit
+                    CloudKitManager.shared.save(record: record) { result in
+                        switch result {
+                        case .success(_):
+                            // update our checkedInProfiles array
+                            print("✅ Checked In/Out Successfully")
+                        case .failure(_):
+                            print("❌ Error saving record")
+                        }
+                    }
+                case .failure:
+                    print("❌ Error fetching record")
+                }
+            }
+
+    }
 }
+
