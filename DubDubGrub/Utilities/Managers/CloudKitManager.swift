@@ -45,13 +45,31 @@ final class CloudKitManager {
         
         CKContainer.default().publicCloudDatabase.fetch(withQuery: query) { result in
             switch result {
-            case .success((let matchResults, _)):
+            case .success(let results):
                 do {
-                    let locations = try! matchResults.map {
-                        try $1.get().convertToDDGLocation()
+                    let locations = try! results.matchResults.map {
+                        try $0.1.get().convertToDDGLocation()
                     }
                     completed(.success(locations))
                 }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func getCheckedInProfiles(for locationID: CKRecord.ID, completed: @escaping (Result<[DDGProfile], Error>) -> Void) {
+        let reference = CKRecord.Reference(recordID: locationID, action: .none)
+        let predicate = NSPredicate(format: "isCheckedIn == %@", reference)
+        let query = CKQuery(recordType: RecordType.profile, predicate: predicate)
+        
+        CKContainer.default().publicCloudDatabase.fetch(withQuery: query) { result in
+            switch result {
+            case .success(let results):
+                let profiles = try! results.matchResults.map {
+                    try $0.1.get().convertToDDGProfile()
+                }
+                completed(.success(profiles))
             case .failure(let error):
                 print(error.localizedDescription)
             }
